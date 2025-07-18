@@ -1,21 +1,24 @@
+"use client";
+
+import { useRecoilValue } from "recoil";
+import { bookmarksAtom } from "@/state/bookmarks";
 import BookmarkCard from "@/components/BookmarkCard";
+import { BookmarkForm } from "@/components/BookmarkForm";
 
 export default function Page() {
-  return (
-    <div className="space-y-4">
-      <BookmarkCard
-        title="OpenAI Docs"
-        description="All things GPT, API keys, and embeddings."
-        url="https://platform.openai.com/docs"
-        tags={["openai", "ai", "api"]}
-      />
+  const bookmarks = useRecoilValue(bookmarksAtom);
 
-      <BookmarkCard
-        title="Shadcn Docs"
-        description="Beautiful component system using Tailwind CSS."
-        url="https://ui.shadcn.com/"
-        tags={["shadcn", "ui", "tailwind"]}
-      />
+  return (
+    <div className="max-w-xl mx-auto space-y-6 p-6">
+      <h1 className="text-2xl font-bold">AI Bookmark App</h1>
+
+      <BookmarkForm />
+
+      <div className="space-y-4">
+        {bookmarks.map((bkmk, index) => (
+          <BookmarkCard key={index} {...bkmk} />
+        ))}
+      </div>
     </div>
   );
 }
