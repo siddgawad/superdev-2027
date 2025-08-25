@@ -1,0 +1,42 @@
+// This is your Prisma schema file
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  isAdmin   Boolean  @default(false)
+  createdAt DateTime @default(now())
+  orders    Order[]
+}
+
+model Product {
+  id           String   @id @default(cuid())
+  title        String
+  slug         String   @unique
+  priceInCents Int
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+}
+
+enum OrderStatus {
+  PENDING
+  PAID
+}
+
+model Order {
+  id               String      @id @default(cuid())
+  userId           String
+  amountInCents    Int
+  stripeCheckoutId String?     @unique
+  status           OrderStatus @default(PENDING)
+  createdAt        DateTime    @default(now())
+  user             User        @relation(fields: [userId], references: [id])
+}
