@@ -5,6 +5,7 @@ export async function GET() {
     await prisma.$queryRaw`SELECT 1`;
     return Response.json({ ok: true, db: "ok" });
   } catch (e) {
+    console.error("Database health check failed:", e);
     return new Response(JSON.stringify({ ok: false, db: "down" }), { status: 500 });
   }
 }
