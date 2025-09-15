@@ -1,0 +1,1 @@
+During this chatbot development I will use supabase,pinecone,openai,sse
