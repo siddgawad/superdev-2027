@@ -28,7 +28,7 @@ export default function LLMForm() {
               onChange={() => setMode("translate")}
               className="w-4 h-4 text-blue-600"
             />
-            <span className="font-medium">Translate Text</span>
+            <span className="font-medium text-zinc-900">Translate Text</span>
           </label>
           <label className="flex items-center gap-3 cursor-pointer">
             <input
@@ -39,7 +39,7 @@ export default function LLMForm() {
               onChange={() => setMode("recipe")}
               className="w-4 h-4 text-blue-600"
             />
-            <span className="font-medium">Generate Recipe</span>
+            <span className="font-medium text-zinc-900">Generate Recipe</span>
           </label>
         </div>
 
@@ -52,7 +52,7 @@ export default function LLMForm() {
               </label>
               <select 
                 name="language" 
-                className="w-full border border-slate-300 p-3 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="w-full border text-zinc-900 border-slate-300 p-3 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 defaultValue="italian"
               >
                 {LANGS.map((lang) => (
@@ -70,7 +70,7 @@ export default function LLMForm() {
                 name="text"
                 rows={4}
                 placeholder="Enter the English text you want to translate..."
-                className="w-full border border-slate-300 p-3 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
+                className="w-full text-zinc-900 border border-slate-300 p-3 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500 resize-none"
                 required
               />
             </div>
@@ -87,7 +87,7 @@ export default function LLMForm() {
               name="dish"
               type="text"
               placeholder="e.g., Chicken Biryani, Caesar Salad, Chocolate Cake..."
-              className="w-full border border-slate-300 p-3 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full text-zinc-900 border border-slate-300 p-3 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               required
             />
             <p className="text-xs text-slate-500 mt-1">
