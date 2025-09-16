@@ -1,0 +1,9 @@
+{
+	"id": "UMQXnMIs0nsDWoR",
+	"json": "{\"id\":\"UMQXnMIs0nsDWoR\",\"url\":\"https://docs.expo.dev/versions/latest/sdk/fingerprint\",\"loadedUrl\":\"https://docs.expo.dev/versions/latest/sdk/fingerprint/\",\"uniqueKey\":\"https://docs.expo.dev/versions/latest/sdk/fingerprint\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:35.047Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/versions/latest/sdk/fingerprint",
+	"url": "https://docs.expo.dev/versions/latest/sdk/fingerprint"
+}

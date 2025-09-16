@@ -1,0 +1,9 @@
+{
+	"id": "84l5DMWSmh8B8Ag",
+	"json": "{\"id\":\"84l5DMWSmh8B8Ag\",\"url\":\"https://docs.expo.dev/router/migrate/from-react-navigation\",\"loadedUrl\":\"https://docs.expo.dev/router/migrate/from-react-navigation/\",\"uniqueKey\":\"https://docs.expo.dev/router/migrate/from-react-navigation\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:38.532Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/router/migrate/from-react-navigation",
+	"url": "https://docs.expo.dev/router/migrate/from-react-navigation"
+}

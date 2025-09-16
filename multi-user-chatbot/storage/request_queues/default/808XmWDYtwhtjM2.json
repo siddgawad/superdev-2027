@@ -1,0 +1,9 @@
+{
+	"id": "808XmWDYtwhtjM2",
+	"json": "{\"id\":\"808XmWDYtwhtjM2\",\"url\":\"https://docs.expo.dev/additional-resources\",\"loadedUrl\":\"https://docs.expo.dev/additional-resources/\",\"uniqueKey\":\"https://docs.expo.dev/additional-resources\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:24.099Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/additional-resources",
+	"url": "https://docs.expo.dev/additional-resources"
+}

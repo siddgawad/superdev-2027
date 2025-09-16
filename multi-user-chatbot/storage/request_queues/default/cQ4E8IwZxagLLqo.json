@@ -1,0 +1,9 @@
+{
+	"id": "cQ4E8IwZxagLLqo",
+	"json": "{\"id\":\"cQ4E8IwZxagLLqo\",\"url\":\"https://docs.expo.dev/router/installation\",\"loadedUrl\":\"https://docs.expo.dev/router/installation/\",\"uniqueKey\":\"https://docs.expo.dev/router/installation\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:26.879Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/router/installation",
+	"url": "https://docs.expo.dev/router/installation"
+}

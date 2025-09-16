@@ -1,0 +1,9 @@
+{
+	"id": "GSeBJo7fnNTaCPI",
+	"json": "{\"id\":\"GSeBJo7fnNTaCPI\",\"url\":\"https://docs.expo.dev/guides/monorepos\",\"loadedUrl\":\"https://docs.expo.dev/guides/monorepos/\",\"uniqueKey\":\"https://docs.expo.dev/guides/monorepos\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:30.082Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/guides/monorepos",
+	"url": "https://docs.expo.dev/guides/monorepos"
+}

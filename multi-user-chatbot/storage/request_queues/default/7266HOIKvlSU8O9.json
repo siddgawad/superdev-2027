@@ -1,0 +1,9 @@
+{
+	"id": "7266HOIKvlSU8O9",
+	"json": "{\"id\":\"7266HOIKvlSU8O9\",\"url\":\"https://docs.expo.dev/build-reference/variants\",\"loadedUrl\":\"https://docs.expo.dev/build-reference/variants/\",\"uniqueKey\":\"https://docs.expo.dev/build-reference/variants\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:28.149Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/build-reference/variants",
+	"url": "https://docs.expo.dev/build-reference/variants"
+}

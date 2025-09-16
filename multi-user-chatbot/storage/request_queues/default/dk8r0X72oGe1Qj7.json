@@ -1,0 +1,9 @@
+{
+	"id": "dk8r0X72oGe1Qj7",
+	"json": "{\"id\":\"dk8r0X72oGe1Qj7\",\"url\":\"https://docs.expo.dev/versions/latest/sdk/reanimated\",\"loadedUrl\":\"https://docs.expo.dev/versions/latest/sdk/reanimated/\",\"uniqueKey\":\"https://docs.expo.dev/versions/latest/sdk/reanimated\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:26.965Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/versions/latest/sdk/reanimated",
+	"url": "https://docs.expo.dev/versions/latest/sdk/reanimated"
+}

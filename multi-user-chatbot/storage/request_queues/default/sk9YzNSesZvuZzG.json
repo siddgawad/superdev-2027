@@ -1,0 +1,9 @@
+{
+	"id": "sk9YzNSesZvuZzG",
+	"json": "{\"id\":\"sk9YzNSesZvuZzG\",\"url\":\"https://docs.expo.dev/bare/using-expo-cli\",\"loadedUrl\":\"https://docs.expo.dev/bare/using-expo-cli/\",\"uniqueKey\":\"https://docs.expo.dev/bare/using-expo-cli\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:26.709Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/bare/using-expo-cli",
+	"url": "https://docs.expo.dev/bare/using-expo-cli"
+}

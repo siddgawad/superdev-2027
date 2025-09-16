@@ -1,0 +1,9 @@
+{
+	"id": "zuXOYr0Wgbb6BoA",
+	"json": "{\"id\":\"zuXOYr0Wgbb6BoA\",\"url\":\"https://docs.expo.dev/eas/metadata\",\"loadedUrl\":\"https://docs.expo.dev/eas/metadata/\",\"uniqueKey\":\"https://docs.expo.dev/eas/metadata\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:25.123Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/eas/metadata",
+	"url": "https://docs.expo.dev/eas/metadata"
+}

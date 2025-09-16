@@ -1,0 +1,9 @@
+{
+	"id": "arBmkMlWQNqh94b",
+	"json": "{\"id\":\"arBmkMlWQNqh94b\",\"url\":\"https://docs.expo.dev/router/reference/screen-tracking\",\"loadedUrl\":\"https://docs.expo.dev/router/reference/screen-tracking/\",\"uniqueKey\":\"https://docs.expo.dev/router/reference/screen-tracking\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:46:26.116Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/router/reference/screen-tracking",
+	"url": "https://docs.expo.dev/router/reference/screen-tracking"
+}

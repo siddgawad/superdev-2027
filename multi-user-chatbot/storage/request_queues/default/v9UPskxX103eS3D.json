@@ -1,0 +1,9 @@
+{
+	"id": "v9UPskxX103eS3D",
+	"json": "{\"id\":\"v9UPskxX103eS3D\",\"url\":\"https://docs.expo.dev/versions/latest/sdk/ui\",\"loadedUrl\":\"https://docs.expo.dev/versions/latest/sdk/ui/\",\"uniqueKey\":\"https://docs.expo.dev/versions/latest/sdk/ui\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:46:27.216Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/versions/latest/sdk/ui",
+	"url": "https://docs.expo.dev/versions/latest/sdk/ui"
+}

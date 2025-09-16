@@ -1,0 +1,9 @@
+{
+	"id": "lq3mhu2H2oaX981",
+	"json": "{\"id\":\"lq3mhu2H2oaX981\",\"url\":\"https://docs.expo.dev/eas-update/migrate-from-classic-updates\",\"loadedUrl\":\"https://docs.expo.dev/eas-update/migrate-from-classic-updates/\",\"uniqueKey\":\"https://docs.expo.dev/eas-update/migrate-from-classic-updates\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:46:23.455Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/eas-update/migrate-from-classic-updates",
+	"url": "https://docs.expo.dev/eas-update/migrate-from-classic-updates"
+}

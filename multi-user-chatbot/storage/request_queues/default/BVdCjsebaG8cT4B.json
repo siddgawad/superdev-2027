@@ -1,0 +1,9 @@
+{
+	"id": "BVdCjsebaG8cT4B",
+	"json": "{\"id\":\"BVdCjsebaG8cT4B\",\"url\":\"https://docs.expo.dev/app-signing/local-credentials\",\"loadedUrl\":\"https://docs.expo.dev/app-signing/local-credentials/\",\"uniqueKey\":\"https://docs.expo.dev/app-signing/local-credentials\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:35.084Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/app-signing/local-credentials",
+	"url": "https://docs.expo.dev/app-signing/local-credentials"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "CELfw4X1Pa05l8q",
+	"json": "{\"id\":\"CELfw4X1Pa05l8q\",\"url\":\"https://docs.expo.dev/guides/using-eslint\",\"loadedUrl\":\"https://docs.expo.dev/guides/using-eslint/\",\"uniqueKey\":\"https://docs.expo.dev/guides/using-eslint\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:31.524Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/guides/using-eslint",
+	"url": "https://docs.expo.dev/guides/using-eslint"
+}

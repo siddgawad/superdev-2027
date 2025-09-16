@@ -1,0 +1,9 @@
+{
+	"id": "dQFK4apgErLTQgc",
+	"json": "{\"id\":\"dQFK4apgErLTQgc\",\"url\":\"https://docs.expo.dev/tutorial/add-navigation\",\"loadedUrl\":\"https://docs.expo.dev/tutorial/add-navigation/\",\"uniqueKey\":\"https://docs.expo.dev/tutorial/add-navigation\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:31.886Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/tutorial/add-navigation",
+	"url": "https://docs.expo.dev/tutorial/add-navigation"
+}

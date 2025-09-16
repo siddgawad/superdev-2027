@@ -1,0 +1,9 @@
+{
+	"id": "0s6Cgmcg6DRnNTi",
+	"json": "{\"id\":\"0s6Cgmcg6DRnNTi\",\"url\":\"https://docs.expo.dev/tutorial/screenshot\",\"loadedUrl\":\"https://docs.expo.dev/tutorial/screenshot/\",\"uniqueKey\":\"https://docs.expo.dev/tutorial/screenshot\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:46:29.106Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/tutorial/screenshot",
+	"url": "https://docs.expo.dev/tutorial/screenshot"
+}

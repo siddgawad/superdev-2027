@@ -1,0 +1,9 @@
+{
+	"id": "VMD4q3sqXh2tDRV",
+	"json": "{\"id\":\"VMD4q3sqXh2tDRV\",\"url\":\"https://docs.expo.dev/tutorial/configuration\",\"loadedUrl\":\"https://docs.expo.dev/tutorial/configuration/\",\"uniqueKey\":\"https://docs.expo.dev/tutorial/configuration\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:46:29.584Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/tutorial/configuration",
+	"url": "https://docs.expo.dev/tutorial/configuration"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "Y50Ec8CagK2M79D",
+	"json": "{\"id\":\"Y50Ec8CagK2M79D\",\"url\":\"https://docs.expo.dev/versions/latest/sdk/local-authentication\",\"loadedUrl\":\"https://docs.expo.dev/versions/latest/sdk/local-authentication/\",\"uniqueKey\":\"https://docs.expo.dev/versions/latest/sdk/local-authentication\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:46:28.378Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/versions/latest/sdk/local-authentication",
+	"url": "https://docs.expo.dev/versions/latest/sdk/local-authentication"
+}

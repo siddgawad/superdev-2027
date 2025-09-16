@@ -1,0 +1,9 @@
+{
+	"id": "n8ghKxPNUOc2Mly",
+	"json": "{\"id\":\"n8ghKxPNUOc2Mly\",\"url\":\"https://docs.expo.dev/eas/metadata/getting-started\",\"loadedUrl\":\"https://docs.expo.dev/eas/metadata/getting-started/\",\"uniqueKey\":\"https://docs.expo.dev/eas/metadata/getting-started\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:29.880Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/eas/metadata/getting-started",
+	"url": "https://docs.expo.dev/eas/metadata/getting-started"
+}

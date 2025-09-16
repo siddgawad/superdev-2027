@@ -1,0 +1,9 @@
+{
+	"id": "QEnqI7i772qtL3d",
+	"json": "{\"id\":\"QEnqI7i772qtL3d\",\"url\":\"https://docs.expo.dev/build-reference/ios-builds\",\"loadedUrl\":\"https://docs.expo.dev/build-reference/ios-builds/\",\"uniqueKey\":\"https://docs.expo.dev/build-reference/ios-builds\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:35.379Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/build-reference/ios-builds",
+	"url": "https://docs.expo.dev/build-reference/ios-builds"
+}

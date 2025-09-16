@@ -3,20 +3,27 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "crawl": "tsx src/scripts/crawl.ts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@chatscope/chat-ui-kit-react": "^2.1.1",
     "@supabase/supabase-js": "^2.57.4",
     "cheerio": "^1.1.2",
     "crawlee": "^3.14.1",
     "dotenv": "^17.2.2",
+    "katex": "^0.16.22",
     "next": "15.5.3",
     "openai": "^5.20.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-markdown": "^10.1.0",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
+    "timeago.js": "^4.0.2",
     "turndown": "^7.2.1",
     "undici": "^7.16.0"
   },
@@ -30,6 +37,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.3",
     "tailwindcss": "^4",
+    "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   },
   "description": "During this chatbot development I will use supabase,pinecone,openai,sse",

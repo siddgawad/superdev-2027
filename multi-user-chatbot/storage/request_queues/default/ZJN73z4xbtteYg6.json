@@ -1,0 +1,9 @@
+{
+	"id": "ZJN73z4xbtteYg6",
+	"json": "{\"id\":\"ZJN73z4xbtteYg6\",\"url\":\"https://docs.expo.dev/versions/latest/sdk/intent-launcher\",\"loadedUrl\":\"https://docs.expo.dev/versions/latest/sdk/intent-launcher/\",\"uniqueKey\":\"https://docs.expo.dev/versions/latest/sdk/intent-launcher\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:37.900Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/versions/latest/sdk/intent-launcher",
+	"url": "https://docs.expo.dev/versions/latest/sdk/intent-launcher"
+}

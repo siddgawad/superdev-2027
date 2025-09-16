@@ -1,103 +1,254 @@
-import Image from "next/image";
 
-export default function Home() {
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import ReactMarkdown from "react-markdown";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import * as timeago from "timeago.js";
+import {
+  MainContainer,
+  ChatContainer,
+  ConversationHeader,
+  MessageList,
+  Message,
+  MessageInput,
+  TypingIndicator,
+} from "@chatscope/chat-ui-kit-react";
+
+type Speaker = "user" | "assistant" | "system";
+
+type ConversationEntry = {
+  message: string;
+  speaker: Speaker;
+  date: Date;
+};
+
+type HistoryRow = {
+  id: number;
+  conversation_id: string;
+  speaker: Speaker;
+  content: string;
+  created_at: string; // ISO
+};
+
+type StartEvent = { event: "start"; interactionId: string };
+type TokenEvent = { event: "token"; token: string };
+type EndEvent = {
+  event: "end";
+  final: string;
+  references?: Array<{ url: string; title?: string | null }>;
+};
+type SsePayload = StartEvent | TokenEvent | EndEvent;
+
+export default function Page() {
+  const [text, setText] = useState("");
+  const [conversation, setConversation] = useState<ConversationEntry[]>([]);
+  const [botIsTyping, setBotIsTyping] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("Waiting for query...");
+  const [conversationId, setConversationId] = useState<string | null>(null);
+
+  const esRef = useRef<EventSource | null>(null);
+  const currentAssistantMsgRef = useRef<string>("");
+
+  // localStorage helpers
+  function loadConversationId(): string | null {
+    if (typeof window === "undefined") return null;
+    return localStorage.getItem("conversation_id");
+  }
+  function saveConversationId(id: string) {
+    if (typeof window === "undefined") return;
+    localStorage.setItem("conversation_id", id);
+  }
+  function clearConversationId() {
+    if (typeof window === "undefined") return;
+    localStorage.removeItem("conversation_id");
+    setConversationId(null);
+  }
+
+  // Hydrate conversation id on mount
+  useEffect(() => {
+    const existing = loadConversationId();
+    if (existing) setConversationId(existing);
+  }, []);
+
+  // Load history when we have a conversation id
+  useEffect(() => {
+    (async () => {
+      if (!conversationId) return;
+      try {
+        const res = await fetch(`/api/conversations/${conversationId}/messages`, { cache: "no-store" });
+        if (!res.ok) return;
+        const { messages } = (await res.json()) as { messages: HistoryRow[] };
+        setConversation(
+          (messages ?? []).map((m) => ({
+            speaker: m.speaker,
+            message: m.content,
+            date: new Date(m.created_at),
+          }))
+        );
+      } catch {
+        // ignore
+      }
+    })();
+  }, [conversationId]);
+
+  // Create real conversation (server)
+  async function ensureConversation(): Promise<string> {
+    if (conversationId) return conversationId;
+
+    const res = await fetch("/api/conversations", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({}), // include { userId } if you wire Supabase Auth
+    });
+    if (!res.ok) throw new Error(await res.text());
+    const { id } = (await res.json()) as { id: string };
+    setConversationId(id);
+    saveConversationId(id);
+    return id;
+  }
+
+  async function startNewChat() {
+    esRef.current?.close();
+    setConversation([]);
+    setStatusMessage("New chat…");
+    clearConversationId();
+    await ensureConversation();
+    setStatusMessage("Waiting for query...");
+  }
+
+  function parseSseJSON(data: string): SsePayload | null {
+    try {
+      const obj = JSON.parse(data) as unknown;
+      if (!obj || typeof obj !== "object" || !("event" in obj)) return null;
+      const evt = (obj as { event: string }).event;
+      if (evt === "start" || evt === "token" || evt === "end") return obj as SsePayload;
+      return null;
+    } catch {
+      return null;
+    }
+  }
+
+  async function submit() {
+    const prompt = text.trim();
+    if (!prompt || botIsTyping) return;
+
+    const convId = await ensureConversation();
+
+    setConversation((prev) => [...prev, { message: prompt, speaker: "user", date: new Date() }]);
+    setText("");
+    setBotIsTyping(true);
+    setStatusMessage("Thinking…");
+    currentAssistantMsgRef.current = "";
+
+    esRef.current?.close();
+
+    const qs = new URLSearchParams({ prompt, conversationId: convId });
+    const es = new EventSource(`/api/chat?${qs.toString()}`, { withCredentials: false });
+    esRef.current = es;
+
+    es.onmessage = (evt) => {
+      if (!evt.data) return;
+      if (evt.data === "[DONE]") {
+        es.close();
+        setBotIsTyping(false);
+        setStatusMessage("Waiting for query...");
+        return;
+      }
+      const payload = parseSseJSON(evt.data);
+      if (!payload) return;
+
+      if (payload.event === "start") {
+        setConversation((prev) => [...prev, { message: "", speaker: "assistant", date: new Date() }]);
+        return;
+      }
+      if (payload.event === "token") {
+        currentAssistantMsgRef.current += payload.token;
+        setConversation((prev) => {
+          const copy = [...prev];
+          const last = copy[copy.length - 1];
+          if (last?.speaker === "assistant") last.message = currentAssistantMsgRef.current;
+          return copy;
+        });
+        return;
+      }
+      if (payload.event === "end") {
+        // could render payload.references in UI if you want
+        return;
+      }
+    };
+
+    es.onerror = () => {
+      es.close();
+      setBotIsTyping(false);
+      setStatusMessage("Network error. Try again.");
+    };
+  }
+
+  // Cleanup SSE
+  useEffect(() => () => esRef.current?.close(), []);
+
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main style={{ position: "relative", height: "98vh", overflow: "hidden", padding: 8 }}>
+      <MainContainer>
+        <ChatContainer>
+          <ConversationHeader>
+            <ConversationHeader.Actions>
+              <button
+                onClick={startNewChat}
+                style={{
+                  border: "1px solid #ccc",
+                  padding: "6px 10px",
+                  marginRight: 8,
+                  borderRadius: 6,
+                  cursor: "pointer",
+                  background: "white",
+                }}
+              >
+                New chat
+              </button>
+            </ConversationHeader.Actions>
+            <ConversationHeader.Content userName="Supabase RAG" info={statusMessage} />
+          </ConversationHeader>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+          <MessageList typingIndicator={botIsTyping ? <TypingIndicator content="Assistant is typing…" /> : null}>
+            {conversation.map((entry, idx) => (
+              <Message
+                key={`${entry.speaker}-${idx}-${entry.date.getTime()}`}
+                style={{ width: "90%" }}
+                model={{
+                  type: "custom",
+                  sender: entry.speaker,
+                  position: "single",
+                  direction: entry.speaker === "assistant" ? "incoming" : "outgoing",
+                }}
+              >
+                <Message.CustomContent>
+                  <ReactMarkdown remarkPlugins={[remarkMath]} rehypePlugins={[rehypeKatex]}>
+                    {entry.message}
+                  </ReactMarkdown>
+                </Message.CustomContent>
+                <Message.Footer
+                  sentTime={timeago.format(entry.date)}
+                  sender={entry.speaker === "assistant" ? "Assistant" : "You"}
+                />
+              </Message>
+            ))}
+          </MessageList>
+
+          <MessageInput
+            placeholder="Ask anything about your docs…"
+            onSend={submit}
+            onChange={(_e, v) => setText(v)}
+            value={text}
+            sendButton
+            autoFocus
+            disabled={botIsTyping}
+            attachButton={false}
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </ChatContainer>
+      </MainContainer>
+    </main>
   );
 }

@@ -1,0 +1,9 @@
+{
+	"id": "sipIQ5ennFtjDAs",
+	"json": "{\"id\":\"sipIQ5ennFtjDAs\",\"url\":\"https://docs.expo.dev/tutorial/eas/using-github\",\"loadedUrl\":\"https://docs.expo.dev/tutorial/eas/using-github/\",\"uniqueKey\":\"https://docs.expo.dev/tutorial/eas/using-github\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:46:29.081Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/tutorial/eas/using-github",
+	"url": "https://docs.expo.dev/tutorial/eas/using-github"
+}

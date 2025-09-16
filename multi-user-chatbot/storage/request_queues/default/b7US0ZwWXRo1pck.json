@@ -1,0 +1,9 @@
+{
+	"id": "b7US0ZwWXRo1pck",
+	"json": "{\"id\":\"b7US0ZwWXRo1pck\",\"url\":\"https://docs.expo.dev/eas-insights/introduction\",\"loadedUrl\":\"https://docs.expo.dev/eas-insights/introduction/\",\"uniqueKey\":\"https://docs.expo.dev/eas-insights/introduction\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:25.181Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/eas-insights/introduction",
+	"url": "https://docs.expo.dev/eas-insights/introduction"
+}

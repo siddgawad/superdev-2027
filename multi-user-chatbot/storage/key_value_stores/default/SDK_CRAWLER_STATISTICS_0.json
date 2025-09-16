@@ -1,0 +1,39 @@
+{
+  "requestsFinished": 388,
+  "requestsFailed": 2,
+  "requestsRetries": 0,
+  "requestsFailedPerMinute": 1,
+  "requestsFinishedPerMinute": 336,
+  "requestMinDurationMillis": 54,
+  "requestMaxDurationMillis": 1277,
+  "requestTotalFailedDurationMillis": 141,
+  "requestTotalFinishedDurationMillis": 91422,
+  "crawlerStartedAt": "2025-09-16T19:45:20.728Z",
+  "crawlerFinishedAt": "2025-09-16T19:46:30.032Z",
+  "statsPersistedAt": "2025-09-16T19:46:30.032Z",
+  "crawlerRuntimeMillis": 69349,
+  "crawlerLastStartTimestamp": 1758051920683,
+  "requestRetryHistogram": [
+    390
+  ],
+  "statsId": 0,
+  "requestAvgFailedDurationMillis": 71,
+  "requestAvgFinishedDurationMillis": 236,
+  "requestTotalDurationMillis": 91563,
+  "requestsTotal": 390,
+  "requestsWithStatusCode": {
+    "404": 1
+  },
+  "errors": {
+    "C:\\superdev-2027\\superdev-2027\\multi-user-chatbot\\node_modules\\@crawlee\\src\\internals\\http-crawler.ts:921:19": {
+      "missing error code": {
+        "Error": {
+          "Resource _ served Content-Type _ but only text/html, text/xml, application/xhtml+xml, application/xml, application/json are allowed. Skipping resource.": {
+            "count": 2
+          }
+        }
+      }
+    }
+  },
+  "retryErrors": {}
+}

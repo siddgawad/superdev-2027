@@ -1,0 +1,9 @@
+{
+	"id": "SV7xi7CAPl5AZ6z",
+	"json": "{\"id\":\"SV7xi7CAPl5AZ6z\",\"url\":\"https://docs.expo.dev/build-reference/ios-capabilities\",\"loadedUrl\":\"https://docs.expo.dev/build-reference/ios-capabilities/\",\"uniqueKey\":\"https://docs.expo.dev/build-reference/ios-capabilities\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:37.332Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/build-reference/ios-capabilities",
+	"url": "https://docs.expo.dev/build-reference/ios-capabilities"
+}

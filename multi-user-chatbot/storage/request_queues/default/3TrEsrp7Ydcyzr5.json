@@ -1,0 +1,9 @@
+{
+	"id": "3TrEsrp7Ydcyzr5",
+	"json": "{\"id\":\"3TrEsrp7Ydcyzr5\",\"url\":\"https://docs.expo.dev/router/reference/middleware\",\"loadedUrl\":\"https://docs.expo.dev/router/reference/middleware/\",\"uniqueKey\":\"https://docs.expo.dev/router/reference/middleware\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:46:24.727Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/router/reference/middleware",
+	"url": "https://docs.expo.dev/router/reference/middleware"
+}

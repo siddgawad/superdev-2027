@@ -1,0 +1,9 @@
+{
+	"id": "KQ2eK73xE1dXelH",
+	"json": "{\"id\":\"KQ2eK73xE1dXelH\",\"url\":\"https://docs.expo.dev/router/advanced/modals\",\"loadedUrl\":\"https://docs.expo.dev/router/advanced/modals/\",\"uniqueKey\":\"https://docs.expo.dev/router/advanced/modals\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:30.647Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/router/advanced/modals",
+	"url": "https://docs.expo.dev/router/advanced/modals"
+}

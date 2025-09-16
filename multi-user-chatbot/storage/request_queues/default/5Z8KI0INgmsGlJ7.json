@@ -1,0 +1,9 @@
+{
+	"id": "5Z8KI0INgmsGlJ7",
+	"json": "{\"id\":\"5Z8KI0INgmsGlJ7\",\"url\":\"https://docs.expo.dev/versions/latest/sdk/background-fetch\",\"loadedUrl\":\"https://docs.expo.dev/versions/latest/sdk/background-fetch/\",\"uniqueKey\":\"https://docs.expo.dev/versions/latest/sdk/background-fetch\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:34.260Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/versions/latest/sdk/background-fetch",
+	"url": "https://docs.expo.dev/versions/latest/sdk/background-fetch"
+}

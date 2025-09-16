@@ -1,0 +1,9 @@
+{
+	"id": "UeLfi2dJFDQe4ZY",
+	"json": "{\"id\":\"UeLfi2dJFDQe4ZY\",\"url\":\"https://docs.expo.dev/versions/latest/sdk/apple-authentication\",\"loadedUrl\":\"https://docs.expo.dev/versions/latest/sdk/apple-authentication/\",\"uniqueKey\":\"https://docs.expo.dev/versions/latest/sdk/apple-authentication\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:46:26.452Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/versions/latest/sdk/apple-authentication",
+	"url": "https://docs.expo.dev/versions/latest/sdk/apple-authentication"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "iywnzhOWfyAxeEv",
+	"json": "{\"id\":\"iywnzhOWfyAxeEv\",\"url\":\"https://docs.expo.dev/get-started/set-up-your-environment?mode=development-build&platform=android&device=physical\",\"loadedUrl\":\"https://docs.expo.dev/get-started/set-up-your-environment/\",\"uniqueKey\":\"https://docs.expo.dev/get-started/set-up-your-environment?device=physical&mode=development-build&platform=android\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:46:23.599Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/get-started/set-up-your-environment?device=physical&mode=development-build&platform=android",
+	"url": "https://docs.expo.dev/get-started/set-up-your-environment?mode=development-build&platform=android&device=physical"
+}

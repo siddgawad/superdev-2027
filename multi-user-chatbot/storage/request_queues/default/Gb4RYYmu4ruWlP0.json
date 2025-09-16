@@ -1,0 +1,9 @@
+{
+	"id": "Gb4RYYmu4ruWlP0",
+	"json": "{\"id\":\"Gb4RYYmu4ruWlP0\",\"url\":\"https://docs.expo.dev/linking/ios-universal-links\",\"loadedUrl\":\"https://docs.expo.dev/linking/ios-universal-links/\",\"uniqueKey\":\"https://docs.expo.dev/linking/ios-universal-links\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:34.027Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/linking/ios-universal-links",
+	"url": "https://docs.expo.dev/linking/ios-universal-links"
+}

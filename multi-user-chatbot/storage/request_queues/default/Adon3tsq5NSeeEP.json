@@ -1,0 +1,9 @@
+{
+	"id": "Adon3tsq5NSeeEP",
+	"json": "{\"id\":\"Adon3tsq5NSeeEP\",\"url\":\"https://docs.expo.dev/workflow/web\",\"loadedUrl\":\"https://docs.expo.dev/workflow/web/\",\"uniqueKey\":\"https://docs.expo.dev/workflow/web\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:25.347Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/workflow/web",
+	"url": "https://docs.expo.dev/workflow/web"
+}

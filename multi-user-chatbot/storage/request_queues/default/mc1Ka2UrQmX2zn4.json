@@ -1,0 +1,9 @@
+{
+	"id": "mc1Ka2UrQmX2zn4",
+	"json": "{\"id\":\"mc1Ka2UrQmX2zn4\",\"url\":\"https://docs.expo.dev/tutorial/eas/multiple-app-variants\",\"loadedUrl\":\"https://docs.expo.dev/tutorial/eas/multiple-app-variants/\",\"uniqueKey\":\"https://docs.expo.dev/tutorial/eas/multiple-app-variants\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:46:24.697Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/tutorial/eas/multiple-app-variants",
+	"url": "https://docs.expo.dev/tutorial/eas/multiple-app-variants"
+}

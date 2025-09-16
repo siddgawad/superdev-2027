@@ -1,0 +1,9 @@
+{
+	"id": "h6LQBUJDcQYY8xP",
+	"json": "{\"id\":\"h6LQBUJDcQYY8xP\",\"url\":\"https://docs.expo.dev/guides/using-firebase\",\"loadedUrl\":\"https://docs.expo.dev/guides/using-firebase/\",\"uniqueKey\":\"https://docs.expo.dev/guides/using-firebase\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:33.880Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/guides/using-firebase",
+	"url": "https://docs.expo.dev/guides/using-firebase"
+}

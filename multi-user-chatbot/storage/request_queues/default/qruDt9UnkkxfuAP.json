@@ -1,0 +1,9 @@
+{
+	"id": "qruDt9UnkkxfuAP",
+	"json": "{\"id\":\"qruDt9UnkkxfuAP\",\"url\":\"https://docs.expo.dev/versions/latest/sdk/svg\",\"loadedUrl\":\"https://docs.expo.dev/versions/latest/sdk/svg/\",\"uniqueKey\":\"https://docs.expo.dev/versions/latest/sdk/svg\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:46:27.535Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/versions/latest/sdk/svg",
+	"url": "https://docs.expo.dev/versions/latest/sdk/svg"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "hQYJ0o3JLSvz9Rz",
+	"json": "{\"id\":\"hQYJ0o3JLSvz9Rz\",\"url\":\"https://docs.expo.dev/modules/use-standalone-expo-module-in-your-project\",\"loadedUrl\":\"https://docs.expo.dev/modules/use-standalone-expo-module-in-your-project/\",\"uniqueKey\":\"https://docs.expo.dev/modules/use-standalone-expo-module-in-your-project\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{\"user-agent\":\"GreasyMonkeyCrawler/1.0 (+https://example.com/bot-info)\"},\"userData\":{\"__crawlee\":{\"enqueueStrategy\":\"same-hostname\",\"state\":4}},\"handledAt\":\"2025-09-16T19:45:36.040Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://docs.expo.dev/modules/use-standalone-expo-module-in-your-project",
+	"url": "https://docs.expo.dev/modules/use-standalone-expo-module-in-your-project"
+}
