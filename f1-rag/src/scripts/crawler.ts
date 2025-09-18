@@ -3,6 +3,7 @@ import OpenAI from "openai";
 import dotenv from "dotenv";
 import { PuppeteerWebBaseLoader } from "@langchain/community/document_loaders/web/puppeteer"
 import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
+dotenv.config();
 
 type SimilarityMetric=
     "dot_product" | "cosine" | "euclidean"
@@ -37,16 +38,58 @@ const {ASTRA_DB_TOKEN,ASTRA_DB_NAMESPACE,
 
     const client = new DataAPIClient(ASTRA_DB_TOKEN);
     const db = client.db(ASTRA_DB_ENDPOINT as string,{keyspace:ASTRA_DB_NAMESPACE});
-    const results = new RecursiveCharacterTextSplitter({
+    const splitter = new RecursiveCharacterTextSplitter({
         chunkSize:512,
         chunkOverlap:100
     });
 
     const createCollection = async (similarityMetric:SimilarityMetric = "dot_product")=>{
-        await db.createCollection(ASTRA_DB_COLLECTION as string, {
+        const res = await db.createCollection(ASTRA_DB_COLLECTION as string, {
             vector:{
                 dimension:1536,
                 metric:similarityMetric
             }
         })
+        console.log(res);
     }
+
+    const scrapePage = async(url:string)=>{
+        const loader = new PuppeteerWebBaseLoader(url,{
+            launchOptions:{
+                headless:true
+            },
+            gotoOptions:{
+                waitUntil:"domcontentloaded"
+            },
+            evaluate:async(page,browser)=>{
+                const result = await page.evaluate(()=>document.body.innerHTML);
+                await browser.close();
+                return result;
+            }
+        })
+        return (await loader.scrape())?.replace(/<[^>]*>?/gm,'')
+    }
+
+    const loadSampleData = async()=>{
+        const collection = await db.collection(ASTRA_DB_COLLECTION as string);
+        for await (const url of f1Data){
+            const content = await scrapePage(url);
+            const chunks = await splitter.splitText(content);
+            for await(const chunk of chunks){
+                const embedding = await openai.embeddings.create({
+                    model:"text-embedding-3-small",
+                    input:chunks,
+                    encoding_format:"float"
+                })
+                const vector = embedding.data[0].embedding;
+                const res = await collection.insertOne({
+                    $vector:vector,
+                    text:chunk
+
+                })
+                console.log(res);
+            }
+        }
+    }
+
+    createCollection().then(()=>loadSampleData());
