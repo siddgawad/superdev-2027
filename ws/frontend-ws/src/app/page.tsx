@@ -2,9 +2,7 @@
 
 import useChatSocket from "@/chat/useChatSocket";
 import Shell from "@/components/Shell";
-import dotenv from "dotenv";
 
-dotenv.config();
 
 export default function Page() {
   const {
@@ -13,7 +11,7 @@ export default function Page() {
   } = useChatSocket();
 
   const isConnected = status === 'connected';
-  const serverUrl = process.env.URL ?? '';
+  const serverUrl = process.env.URL as string;
 
   return (
     <Shell

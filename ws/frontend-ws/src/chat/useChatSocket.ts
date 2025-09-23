@@ -5,7 +5,7 @@ import { useCallback, useEffect, useRef, useState} from 'react';
 import type { ConnectionStatus,Message,RoomId,ClientMsg,ChatMsg } from './types';
 
 export default function useChatSocket() {
-    const WS_URL = 'ws://localhost:3003';
+    const WS_URL = process.env.URL as string;
     const [status, setStatus] = useState<ConnectionStatus>('disconnected');
     const wsRef = useRef<WebSocket | null>(null);
     const [currentRoom, setCurrentRoom] = useState<RoomId>('');
@@ -60,7 +60,7 @@ export default function useChatSocket() {
       } catch {
         setStatus('error');
       }
-    }, []);
+    }, [WS_URL]);
   
     const disconnect = useCallback(() => {
       wsRef.current?.close();
