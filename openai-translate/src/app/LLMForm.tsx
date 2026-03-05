@@ -6,13 +6,16 @@ import { runLLM } from "./actions";
 const initialState = { result: "" as string, error: undefined as string | undefined };
 
 const LANGS = [
-  "italian", "spanish", "french", "german", 
+  "italian", "spanish", "french", "german",
   "hindi", "marathi", "japanese", "portuguese", "chinese"
 ];
 
 export default function LLMForm() {
   const [state, formAction, isPending] = useActionState(runLLM, initialState);
   const [mode, setMode] = useState<"translate" | "recipe">("translate");
+  const [showAdvanced, setShowAdvanced] = useState(false);
+  const [aiModel, setAiModel] = useState("gpt-4o-mini");
+  const [temperature, setTemperature] = useState(0.3);
 
   return (
     <div className="space-y-6">
@@ -50,8 +53,8 @@ export default function LLMForm() {
               <label className="block text-sm font-medium text-slate-700 mb-2">
                 Target Language
               </label>
-              <select 
-                name="language" 
+              <select
+                name="language"
                 className="w-full border text-zinc-900 border-slate-300 p-3 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 defaultValue="italian"
               >
@@ -95,6 +98,58 @@ export default function LLMForm() {
             </p>
           </div>
         )}
+
+        {/* Advanced Settings Toggle */}
+        <div>
+          <button
+            type="button"
+            onClick={() => setShowAdvanced(!showAdvanced)}
+            className="text-sm font-medium text-blue-600 hover:text-blue-800 flex items-center gap-1"
+          >
+            <svg className={`w-4 h-4 transition-transform ${showAdvanced ? 'rotate-90' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+            Advanced AI Settings
+          </button>
+
+          {showAdvanced && (
+            <div className="mt-4 p-4 border border-slate-200 rounded-md bg-slate-50 space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">Model</label>
+                <select
+                  value={aiModel}
+                  onChange={(e) => setAiModel(e.target.value)}
+                  className="w-full border text-sm text-zinc-900 border-slate-300 p-2 rounded-md focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="gpt-4o-mini">GPT-4o Mini (Fast & Cheap)</option>
+                  <option value="gpt-4o">GPT-4o (Most Capable)</option>
+                  <option value="gpt-3.5-turbo">GPT-3.5 Turbo (Legacy)</option>
+                </select>
+              </div>
+              <div>
+                <label className="flex justify-between text-sm font-medium text-slate-700 mb-2">
+                  <span>Temperature</span>
+                  <span className="text-blue-600 font-mono">{temperature}</span>
+                </label>
+                <input
+                  type="range"
+                  min="0" max="2" step="0.1"
+                  value={temperature}
+                  onChange={(e) => setTemperature(parseFloat(e.target.value))}
+                  className="w-full accent-blue-600"
+                />
+                <div className="flex justify-between text-xs text-slate-500 mt-1">
+                  <span>Precise</span>
+                  <span>Creative</span>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Hidden inputs for advanced state */}
+        <input type="hidden" name="modelType" value={aiModel} />
+        <input type="hidden" name="temperature" value={temperature} />
 
         <button
           type="submit"

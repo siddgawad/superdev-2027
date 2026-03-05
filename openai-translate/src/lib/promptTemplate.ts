@@ -3,10 +3,7 @@ import "server-only";
 import { ChatOpenAI } from "@langchain/openai";
 import { ChatPromptTemplate } from "@langchain/core/prompts";
 
-const model = new ChatOpenAI({
-  model: "gpt-4o-mini",
-  temperature: 0,
-});
+export const dynamic = 'force-dynamic';
 
 const translationPrompt = ChatPromptTemplate.fromMessages([
   ["system", "Translate the following from English into {language}."],
@@ -25,7 +22,13 @@ export async function runLLMTask(params: {
   language?: string; // required if mode=translate
   text?: string;     // required if mode=translate
   dish?: string;     // required if mode=recipe
+  modelType?: string;
+  temperature?: number;
 }) {
+  const model = new ChatOpenAI({
+    model: params.modelType ?? "gpt-4o-mini",
+    temperature: params.temperature ?? 0.3,
+  });
   if (params.mode === "translate") {
     const chain = translationPrompt.pipe(model);
     const res = await chain.invoke({
